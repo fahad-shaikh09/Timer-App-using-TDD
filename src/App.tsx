@@ -1,24 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  
+  const playFunc:any = () => {
+    console.log("playFunc is Clicked")
+  }
+  
+  const stopFunc:any = () => {
+      console.log("stopFunc is Clicked")
+
+  }
+  
+  const resetFunc:any = () => {
+    console.log("resetFunc is Clicked")
+
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Timer App using TS and TDD</h1>
+        <div className="container">
+          <span>0</span> 
+          <span>:</span>
+          <span>0</span> 
+          <span>:</span>
+          <span>0</span> 
+        </div>
+      
+      <div className="buttons">
+        <button onClick={playFunc}>Play</button>
+        <button onClick={stopFunc}>Stop</button>
+        <button onClick={resetFunc}>Reset</button>
+      </div>
+
     </div>
   );
 }
